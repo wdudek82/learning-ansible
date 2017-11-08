@@ -1,0 +1,14 @@
+---
+- name: "Challange 1"
+  hosts: groupA
+
+  tasks:
+    - name: django pip 
+      pip:
+        name: django 
+        virtualenv: /home/neevor/code/ansible/challange1/test/
+
+    - name: ansible pip
+      pip:
+        name: ansible
+        virtualenv: /home/neevor/code/ansible/challange1/test/

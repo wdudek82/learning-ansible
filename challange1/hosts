@@ -1,0 +1,10 @@
+[groupA]
+host1
+
+[groupB]
+host3
+host4
+
+[all:vars]
+ansible_connection=local
+

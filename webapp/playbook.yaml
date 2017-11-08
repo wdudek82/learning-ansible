@@ -1,0 +1,9 @@
+---
+- name: List
+  hosts: web
+  serial: 1
+
+  tasks:
+    - name: List root on host
+      delegate_to: "{{ groups['web'][0] }}"
+      shell: ls -hal /
