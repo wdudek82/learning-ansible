@@ -15,10 +15,17 @@
       name: httpd
       state: latest
     notify:
+    - startserservice
+
+  - name: Install nginx server on CentOS 7 nodes
+    yum:
+      name: nginx
+      state: latest
+    notify:
     - startservice
 
   handlers:
   - name: startservice
     service:
       name: httpd
-      state: restarted
+      state: stopped
