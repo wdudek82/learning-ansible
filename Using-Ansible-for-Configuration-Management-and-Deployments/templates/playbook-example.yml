@@ -1,0 +1,11 @@
+--- # Playbook Description (Ignored During Run)
+- hosts: appserver
+  tasks:
+  - name: Install Lynx on App Servers
+    yum: pkg=lynx state=installed update_cache=true
+  - name: Querying for Telnet Install
+    yum: pkg=telnet state=present update_cache=true
+
+# This playbook, when run, will look for a group of hosts called 'appserver'
+# and then try to install lynx and query if telnet is installed using the
+# 'yum' module.
